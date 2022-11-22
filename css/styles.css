@@ -537,6 +537,10 @@ body {
 	fill: currentColor;
 }
 
+.footer-form-container {
+	margin-left: auto;
+}
+
 .footer-form {
 	display: flex;
 	align-items: center;
@@ -630,11 +634,12 @@ body {
 }
 
 .close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	margin-left: auto;
 
 	width: 30px;
 	height: 30px;
@@ -643,6 +648,8 @@ body {
 	background-color: var(--white);
 
 	transition: color var(--timing-function);
+
+	cursor: pointer;
 }
 
 .close:hover {
@@ -657,6 +664,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 40px;
 }
 
 .modal-label {
@@ -668,20 +676,27 @@ body {
 	margin-bottom: 5px;
 }
 
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
 .form-part {
 	display: flex;
 	flex-direction: column;
-	position: relative;
 	margin-bottom: 10px;
 }
 
+.form-wrapper {
+	position: relative;
+}
+
 .form-label {
-	display: block;
 	font-size: 12px;
 	line-height: 1.17;
 	letter-spacing: 0.01em;
-	margin-bottom: 4px;
 	color: var(--form-text-color);
+	margin-bottom: 4px;
 }
 
 .modal-icon {
@@ -710,7 +725,7 @@ body {
 	transition: outline var(--timing-function);
 }
 
-.form-part:focus-within > .modal-icon {
+.form-wrapper:focus-within > .modal-icon {
 	fill: var(--accent);
 }
 
@@ -719,7 +734,8 @@ body {
 }
 
 .textarea-part {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	margin-bottom: 20px;
 }
 
@@ -753,9 +769,10 @@ body {
 	width: 16px;
 	height: 15px;
 
-	outline: 2px solid transparent;
+	outline: 2px solid var(--second-text-color);
 	outline-offset: -2px;
-	border: 2px solid var(--second-text-color);
+
+	/* border: 2px solid var(--second-text-color); */
 	border-radius: 2px;
 
 	background-position: center;
